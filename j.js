@@ -13,7 +13,7 @@ AddForm.addEventListener("submit", (e) => {
     alert("This form has been successfully submitted!");
     console.log(
       `This form has a name of ${name.value} and email of ${email.value}`
-    );
+    ) ;
 
     name.value = "";
     email.value = "";
