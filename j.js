@@ -15,7 +15,7 @@ AddForm.addEventListener("submit", (e) => {
       `This form has a name of ${name.value} and email of ${email.value}`
     );
 
-    name.value = "";
+    name.value =  "";
     email.value = "";
   }
   
