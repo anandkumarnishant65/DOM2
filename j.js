@@ -15,7 +15,7 @@ AddForm.addEventListener("submit", (e) => {
       `This form has a name of ${name.value} and email of ${email.value}`
     );
 
-    name.value =  "";
+    name.value = "";
     email.value = "";
   }
   
@@ -26,4 +26,10 @@ function saveToLocalStorage(event){
     const email = event.target.email.value;
     localStorage.setItem('name',name);
     localStorage.setItem('email',email);
+
+    const obj = {
+      name,
+      email
+  }
+  localStorage.setItem('userDetails' , JSON.stringify(obj));
 }
