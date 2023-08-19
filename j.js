@@ -1,35 +1,19 @@
-var AddForm = document.getElementById("addForm");
+function store(){ //stores items in the localStorage
+  var name = document.getElementById('name').value;
+  var phone = document.getElementById('phn').value;
+  var key = document.getElementById('key').value;
 
-AddForm.addEventListener("submit", (e) => {
-  e.preventDefault();
-
-  var name = document.getElementById("name");
-  var email = document.getElementById("email");
-
-  if (name.value == "" || email.value == "") {
-    alert("Ensure you input a value in both fields!");
-  } else {
-    // perform operation with form input
-    alert("This form has been successfully submitted!");
-    console.log(
-      `This form has a name of ${name.value} and email of ${email.value}`
-    );
-
-    name.value = "";
-    email.value = "";
+  const deatails = {
+      name: name,
+      phone: phone,
+      key: key
   }
-  
-});
-function saveToLocalStorage(event){
-    event.preventDefault();
-    const name = event.target.name.value;
-    const email = event.target.email.value;
-    localStorage.setItem('name',name);
-    localStorage.setItem('email',email);
 
-    const obj = {
-      name,
-      email
-  }
-  localStorage.setItem('userDetails' , JSON.stringify(obj));
+  window.localStorage.setItem(key,JSON.stringify(deatails));  
+  //converting object to string
+}
+
+
+window.onload =function(){ //ensures the page is loaded before functions are executed.
+  document.getElementById("detailsForm").onsubmit = store
 }
