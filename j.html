@@ -6,31 +6,46 @@
   <title>Local Storage</title>
   
 </head>
+<style>
+  body{
+    background-color: rgb(175, 172, 172);
+    width: auto;
+  }
+  .container{
+    background-color: aquamarine;
+    width: 206px;
+  }
+  
+</style>
 <body>
+  <div class="container">
   <div id="formDiv">
         <form id="detailsForm">
             <h1>Local Storage</h1>
             <label for="name" >Name</label>
-            <input type="text" id="name" placeholder="Enter Name.." required autofocus><br>
-            <label for="phn" >Phone</label>
-            <input type="text" id="phn" placeholder="Phone No." required><br>
+            <input type="text" id="name" placeholder="Enter Name.." required autofocus><br><br>
+            <label for="phn" >Phone Number</label>
+            <input type="text" id="phn" placeholder="Phone No." required><br><br>
             <label for="key" >Key</label>
-            <input type="text" id="key" placeholder="Key" required><br>
+            <input type="text" id="key" placeholder="Key" required><br><br>
             <button type="submit">Store Records</button>
+            <button type="edit">Edit</button>
+         
         </form>
-        <br>
-        <label for="retrieveKey" >Enter Key to retrieve item</label>
+        <br><br>
+        
+        <!-- <label for="retrieveKey" >Enter Key to retrieve item</label>
         <input type="text" id="retrieveKey" placeholder="retrieveKey" required><br>
         <button id="retrieveButton">Retrieve records</button>
-        <br>
-        <div id="retrieve"></div>
+        <br> -->
         <br>
         <label for="removeKey" >Enter Key to delete item</label>
         <input type="text" id="removeKey" placeholder="removeKey" required><br>
         <button id="removeButton">Remove record</button>
-        <br>
+        <br><br>
         <button id="clearButton">Clear all records</button>
   </div>
+</div>
   <script src="j.js"></script>
 </body>
 </html>
